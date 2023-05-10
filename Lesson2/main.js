@@ -13,9 +13,30 @@ const loader = new GLTFLoader();
 loader.load( 'textures/scene.gltf', function ( gltf ) {
 
 	scene.add( gltf.scene );
+	gltf.asset;
 
 }, undefined, function ( error ) {
 
 	console.error( error );
 
 } );
+
+
+const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0x00ffff } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
+
+camera.position.z = 5;
+
+
+camera.position.z = 5;
+
+function animate() {
+	requestAnimationFrame( animate );
+	cube.rotation.x += 0.01;
+	cube.rotation.y += 0.01;
+	renderer.render( scene, camera );
+}
+animate();
+
