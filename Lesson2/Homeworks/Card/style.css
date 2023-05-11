@@ -1,0 +1,104 @@
+/** 
+ * A very basic CSS reset:
+ * More about CSS resets: https://meyerweb.com/eric/tools/css/reset/
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit';
+}
+
+body {
+  background-color: #ecf0f3;
+  align-items: center;
+  justify-content: center;
+}
+
+/** 
+ * Card sizing and positioning.
+ * Don't mess with this!
+ */
+.card {
+  width: 300px;
+  height: 540px;
+}
+
+/** 
+ * Just some styling to make the card visible.
+ * Feel free to change this!
+ */
+
+.card {
+  background-color: #ecf0f3;
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  padding-bottom: 0px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 10px 10px 24px #a6b4c8B2, -12px -12px 24px #ffffffcc;
+}
+
+.layout{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  font-weight: 800;
+  color: #7b81be;
+  margin-bottom: 25px;
+}
+
+li {
+  font-weight: 300;
+  color: #7b81be;
+  list-style-position: inside;
+}
+
+li.pink {
+  list-style-image: url(/Images/SVG/kreisPink.svg);
+}
+
+li.green {
+  list-style-image: url(/Images/SVG/kreisGrün.svg);
+}
+
+div.diagram{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.inset{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 125px;
+  box-shadow: inset 10px 10px 24px #a6b4c8B2, inset -12px -12px 24px #ffffffcc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lid{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background-color: #ecf0f3;
+  box-shadow: 10px 10px 24px #a6b4c8B2, -12px -12px 24px #ffffffcc;
+}
