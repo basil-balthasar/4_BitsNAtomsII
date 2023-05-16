@@ -63,11 +63,11 @@ li {
 }
 
 li.pink {
-  list-style-image: url(/Images/SVG/kreisPink.svg);
+  list-style-image: url(/Lesson2/Images/SVG/kreisPink.svg);
 }
 
 li.green {
-  list-style-image: url(/Images/SVG/kreisGrün.svg);
+  list-style-image: url(/Lesson2/Images/SVG/kreisGrün.svg);
 }
 
 div.diagram{
