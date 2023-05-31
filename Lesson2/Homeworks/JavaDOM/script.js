@@ -1,5 +1,12 @@
+let image = document.querySelector("img");
+
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("h1").innerText="Oh you are a "+ fnBrowserDetect() +" user... I see ;)";
+    if(fnBrowserDetect() != "not detected"){
+        document.querySelector("h1").innerText="Oh you are a "+ fnBrowserDetect() +" user... I see ;)";
+    }else{
+        document.querySelector("h1").innerText="This site unfortunately does not support your browser.";
+        image.src = "https://upload.wikimedia.org/wikipedia/commons/0/03/Noto_Emoji_KitKat_1f622.svg";
+    }
 });
 
 
@@ -10,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function fnBrowserDetect(){    
         let userAgent = navigator.userAgent;
         let browserName;
-         
-        let image = document.querySelector("img");
+        
 
         if(userAgent.match(/chrome|chromium|crios/i)){
             browserName = "chrome";
@@ -29,7 +35,7 @@ function fnBrowserDetect(){
             browserName = "edge";
             image.src = "https://upload.wikimedia.org/wikipedia/commons/f/f6/Edge_Logo_2019.svg";
         }else{
-            browserName="No browser detection";
+            browserName = "not detected";
         }
          /** changed into return for easier use in this case */
         return browserName;
